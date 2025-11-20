@@ -1,28 +1,22 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* Base navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+  padding: 12px 20px;
   background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  position: sticky;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  min-height: 60px;
 }
 
-/* Logo Section */
+/* Logo section */
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .nav-logo img {
@@ -32,87 +26,209 @@
 
 .nav-logo p {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bold;
   color: #333;
+  margin: 0;
+  white-space: nowrap;
 }
 
-/* Navigation Menu */
+/* Navigation menu */
 .nav-menu {
   display: flex;
-  gap: 30px;
   list-style: none;
-  font-size: 20px;
-  font-weight: 500;
-
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  align-items: center;
 }
 
 .nav-menu li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
   cursor: pointer;
-  gap: 4px;
-  color: #333;
-  transition: color 0.3s;
+  padding: 8px 0;
+  transition: all 0.3s ease;
 }
-.nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color: rgb(233, 40, 40);
-}
-
-
-
 
 .nav-menu li:hover {
-  color: #000000;
+  color: #ff6b6b;
 }
 
-/* Login & Cart */
+.nav-menu li hr {
+  height: 3px;
+  width: 80%;
+  background: #ff6b6b;
+  border-radius: 10px;
+  border: none;
+  margin: 4px auto 0;
+}
+
+/* Login and cart section */
 .nav-login-cart {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 15px;
+  flex-shrink: 0;
 }
 
 .nav-login-cart button {
-  width: 137px;
-  height: 48px;
-  background-color: white;
-  border: 1px solid gray;
-  color: #333333; /* Keep this one if you want dark text */
-  border-radius: 75px;
-  font-weight: 500;
-  font-size: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .nav-login-cart button:hover {
-  background-color: #f0f0f0;
+  background-color: #ff6b6b;
+  color: white;
+  border-color: #ff6b6b;
 }
-.nav-login-cart button:active{
-    background: #e1e0e0;
-}
-
 
 .nav-login-cart img {
-  height: 28px;
-  width: auto;
+  height: 24px;
+  width: 24px;
   cursor: pointer;
 }
-.nav-cart-count{
-width: 22px;
-height: 22px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: -35px;
-margin-left: -55px;
-border-radius: 11px;
-font-size: 14px;
-background: red;
-color: #f0f0f0;
+
+.nav-cart-count {
+  position: relative;
+  top: -10px;
+  right: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  .nav-logo img{
+     height: 40px;
+  }
+  .nav-logo p {
+    font-size: 16px;
+  }
+  
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .nav-menu li {
+    font-size: 12px;
+  }
+  
+  .nav-login-cart {
+    gap: 10px;
+  }
+  
+  .nav-login-cart button {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  
+  .nav-logo {
+    order: 1;
+    flex: 1;
+  }
+  
+  .nav-logo img {
+    height: 32px;
+  }
+  
+  .nav-logo p {
+    font-size: 18px;
+  }
+  
+  .nav-login-cart {
+    order: 2;
+    gap: 8px;
+  }
+  
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+  }
+  
+  .nav-menu li {
+    font-size: 13px;
+  }
+  
+  .nav-login-cart button {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+  
+  .nav-login-cart img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    top: -6px;
+    right: 6px;
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 320px) {
+  .navbar {
+    padding: 6px 8px;
+  }
+  
+  .nav-logo p {
+    font-size: 16px;
+  }
+  
+  .nav-menu {
+    gap: 10px;
+  }
+  
+  .nav-menu li {
+    font-size: 12px;
+  }
+  
+  .nav-login-cart button {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+}
+
+/* Hover effects for larger screens only */
+@media screen and (min-width: 769px) {
+  .nav-menu li {
+    padding: 10px 0;
+  }
+  
+  .nav-menu li:hover {
+    transform: translateY(-2px);
+  }
 }

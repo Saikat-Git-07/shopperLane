@@ -1,0 +1,49 @@
+.breadcrums {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  padding: 20px 30px;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.breadcrums img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Tablets (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .breadcrums {
+    font-size: 12px;
+    padding: 18px 20px;
+    gap: 6px;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .breadcrums {
+    font-size: 10px;
+    padding: 16px 15px;
+    gap: 5px;
+  }
+
+  .breadcrums img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .breadcrums {
+    font-size: 8px;
+    padding: 14px 10px;
+    line-height: 1.4;
+  }
+}

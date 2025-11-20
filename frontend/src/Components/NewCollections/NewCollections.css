@@ -1,0 +1,267 @@
+/* NewCollections section base styles */
+.newcollections {
+  padding: 60px 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Section heading */
+.newcollections h1 {
+  color: #171717;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Decorative line under heading */
+.newcollections hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+  border: none;
+  margin: 0 auto 50px auto;
+}
+
+/* Collections grid container */
+.collections {
+  display: grid;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Desktop grid - 4 columns */
+@media screen and (min-width: 1200px) {
+  .collections {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Large desktop - still 4 columns but with more spacing */
+@media screen and (min-width: 1400px) {
+  .newcollections {
+    padding: 80px 60px;
+  }
+  
+  .newcollections h1 {
+    font-size: 52px;
+    margin-bottom: 25px;
+  }
+  
+  .newcollections hr {
+    width: 220px;
+    margin-bottom: 60px;
+  }
+  
+  .collections {
+    gap: 36px;
+  }
+}
+
+/* Large tablet and small desktop - 4 columns */
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .newcollections {
+    padding: 50px 40px;
+  }
+  
+  .newcollections h1 {
+    font-size: 42px;
+  }
+  
+  .newcollections hr {
+    width: 180px;
+    margin-bottom: 45px;
+  }
+  
+  .collections {
+    grid-template-columns: repeat(4, 1fr); /* Changed from 3 to 4 */
+    gap: 28px;
+  }
+}
+
+
+/* Tablet - 2 columns */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .newcollections {
+    padding: 40px 30px;
+  }
+  
+  .newcollections h1 {
+    font-size: 36px;
+  }
+  
+  .newcollections hr {
+    width: 160px;
+    height: 5px;
+    margin-bottom: 40px;
+  }
+  
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Large mobile - 2 columns with tighter spacing */
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .newcollections {
+    padding: 35px 20px;
+  }
+  
+  .newcollections h1 {
+    font-size: 32px;
+  }
+  
+  .newcollections hr {
+    width: 140px;
+    height: 4px;
+    margin-bottom: 35px;
+  }
+  
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Mobile portrait - 2 columns, very compact */
+@media screen and (max-width: 479px) {
+  .newcollections {
+    padding: 30px 15px;
+  }
+  
+  .newcollections h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .newcollections hr {
+    width: 120px;
+    height: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 320px) {
+  .newcollections {
+    padding: 25px 12px;
+  }
+  
+  .newcollections h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .newcollections hr {
+    width: 100px;
+    height: 3px;
+    margin-bottom: 25px;
+  }
+  
+  .collections {
+    gap: 12px;
+  }
+}
+
+/* Animation for section entrance */
+@media screen and (min-width: 768px) {
+  .newcollections {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .collections {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state for when collections are being fetched */
+.newcollections.loading .collections {
+  display: grid;
+  gap: 30px;
+}
+
+.newcollections.loading .collections::before {
+  content: '';
+  grid-column: 1 / -1;
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Ensure proper spacing when collections are empty */
+.collections:empty {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collections:empty::before {
+  content: 'No collections available';
+  color: #666;
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* Enhanced focus states for accessibility */
+.newcollections:focus-within {
+  outline: none;
+}
+
+/* Responsive text scaling for better readability */
+@media screen and (max-width: 480px) {
+  .newcollections h1 {
+    line-height: 1.2;
+  }
+}
+
+/* Print styles */
+@media print {
+  .newcollections {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .newcollections hr {
+    background: black;
+  }
+  
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+

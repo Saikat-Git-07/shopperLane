@@ -1,0 +1,167 @@
+.loginsignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5ec, #ffe0c3);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.loginsignup-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loginsignup-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.loginsignup-feilds {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.loginsignup-feilds input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.loginsignup-feilds input:focus {
+  border-color: #ff914d;
+  box-shadow: 0 0 0 2px rgba(255, 145, 77, 0.2);
+}
+
+.loginsignup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginsignup-container button:hover {
+  background-color: #e67330;
+}
+
+.loginsignup-login {
+  margin-top: 15px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.loginsignup-login span {
+  color: #ff914d;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.loginsignup-agree {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.loginsignup-agree input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+/* Tablet view (max 768px) */
+@media (max-width: 768px) {
+  .loginsignup-container {
+    padding: 35px 25px;
+    border-radius: 18px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 26px;
+  }
+
+  .loginsignup-feilds input {
+    font-size: 14px;
+  }
+
+  .loginsignup-container button {
+    font-size: 15px;
+  }
+}
+
+/* Mobile view (max 480px) */
+@media (max-width: 480px) {
+  .loginsignup-container {
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 24px;
+  }
+
+  .loginsignup-feilds input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .loginsignup-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .loginsignup-login {
+    font-size: 13px;
+  }
+
+  .loginsignup-agree {
+    font-size: 12px;
+    gap: 8px;
+  }
+}
+
+/* Very small devices (max 350px) */
+@media (max-width: 350px) {
+  .loginsignup-container {
+    padding: 25px 15px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 22px;
+  }
+
+  .loginsignup-feilds {
+    gap: 14px;
+  }
+
+  .loginsignup-feilds input {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .loginsignup-container button {
+    font-size: 13px;
+  }
+}
+

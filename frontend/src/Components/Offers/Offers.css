@@ -1,45 +1,87 @@
-.offers{
-    width: 75%;
-    height: 60vh;
-    display: flex;
-    margin: auto;
-    padding: 0px 140px;
-    margin-bottom: 150px;
-    background: linear-gradient(180deg,#fde1ff 0%,#e1ffea22 60%);
+.offers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem;
+  gap: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
 }
-.offers-left{
-    flex: 1;
+
+.offers-left {
+  flex: 1;
+  color: #222;
+  min-width: 250px;
+}
+
+.offers-left h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.2em 0;
+}
+
+.offers-left p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 1em 0;
+}
+
+.offers-left button {
+  background-color: #fff;
+  color: #f8b500;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(248, 181, 0, 0.3);
+}
+
+.offers-left button:hover {
+  background-color: #f8b500;
+  color: #fff;
+}
+
+.offers-right {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offers-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .offers {
     flex-direction: column;
-    display: flex;
-    justify-content: center;
-}
-.offers-left h1{
-    color: #171717;
-    font-size: 80px;
-    font-weight: 600;
-}
-.offers-left p{
-    font-size: 22px;
-    font-weight: 600;
-    color: #171717;
-}
-.offers-left button{
-    width: 282px;
-    height: 70px;
-    border-radius: 35px;
-    background: #ff4141;
-    border: none;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 30px;
-    cursor: pointer;
-}
-.offers-right{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-top: 50px;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .offers-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .offers-left p {
+    font-size: 1rem;
+  }
+
+  .offers-left button {
+    margin-top: 1rem;
+  }
 }
 
