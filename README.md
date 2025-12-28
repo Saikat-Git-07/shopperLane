@@ -3,8 +3,8 @@
 ShopperLane is a full-stack MERN-based e-commerce web application.
 The application allows users to browse products, add items to a cart, and enables an admin to manage products through a simple admin panel.
 
-🚀 Tech Stack
-Frontend
+🚀 Tech Stack 
+Frontend :
 
 React.js
 
@@ -12,7 +12,7 @@ CSS
 
 Component-based UI architecture
 
-Backend
+Backend :
 
 Node.js
 
@@ -20,14 +20,15 @@ Express.js
 
 RESTful APIs
 
-Database
+Database :
 
 MongoDB Atlas
 
 Mongoose ODM
 
 ✨ Features
-👤 User Features
+
+👤 User Features :
 
 User signup and login
 
@@ -39,34 +40,13 @@ Add products to cart
 
 Cart page with selected items
 
-🛒 Admin Features
+🛒 Admin Features :
 
 Admin panel
 
 Add new products
 
 Manage product listings
-
-📂 Project Structure
-ShopperLane/
-│
-├── frontend/
-│   ├── src/
-│   ├── Components/
-│   ├── Pages/
-│   └── Context/
-│
-├── backend/
-│   ├── routes/
-│   ├── models/
-│   ├── controllers/
-│   └── index.js
-│
-├── admin/
-│   ├── components/
-│   └── pages/
-│
-└── README.md
 
 🔑 Environment Variables
 
@@ -78,9 +58,10 @@ MONGO_URI=your_mongodb_connection_string
 PORT=5000
 
 
-⚠️ The .env file is not pushed to GitHub for security reasons.
+⚠️ The .env file is excluded from GitHub using .gitignore for security reasons.
 
-🛠️ How to Run the Project Locally
+🛠️ How to Run the Project :
+
 1️⃣ Clone the repository
 git clone https://github.com/your-username/shopperlane.git
 
@@ -100,13 +81,13 @@ npm start
 cd frontend
 npm start
 
-📌 Project Status
+📌 Project Status :
 
 🔧 Deployment: Not deployed (local development)
 
 📦 Database: MongoDB Atlas
 
-🔮 Future Improvements
+🔮 Future Improvements:
 
 Order management system
 
@@ -118,7 +99,7 @@ Improved authentication security
 
 Better admin analytics dashboard
 
-👨‍💻 Author
+👨‍💻 Author :
 
 Saikat Das
 B.Tech – Information Technology
