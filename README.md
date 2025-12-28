@@ -1,4 +1,4 @@
-🛍️ ShopperLane – MERN E-Commerce Application
+# 🛍️ ShopperLane – MERN E-Commerce Application
 
 ShopperLane is a full-stack MERN-based e-commerce web application.
 The application allows users to browse products, add items to a cart, and enables an admin to manage products through a simple admin panel.
